@@ -59,21 +59,42 @@
     <div class="subnavbar">
         <div class="subnavbar-inner">
             <div class="container">
-                <ul class="mainnav">    <!-- copiar menu del proyecto pasado aquí-->
-                    <li class="active"><a href="index.html"><i class="icon-dashboard"></i><span>Dashboard</span> </a> </li>
-                    <li><a class="navbar-brand" asp-area="" asp-controller="Cliente_Proveedor" asp-action="Index"><i class="icon-list-alt"></i><span>Reports</span> </a> </li>
-                    <li><a href="guidely.html"><i class="icon-facetime-video"></i><span>App Tour</span> </a></li>
-                    <li><a href="charts.html"><i class="icon-bar-chart"></i><span>Charts</span> </a> </li>
-                    <li><a href="shortcodes.html"><i class="icon-code"></i><span>Shortcodes</span> </a> </li>
+                <ul class="mainnav">
+                    <!-- copiar menu del proyecto pasado aquí-->
+                    <li><a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Logeo">Inicio</a></li>
+
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-long-arrow-down"></i><span>Drops</span> <b class="caret"></b></a>
+                        <a asp-controller="" asp-action="" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-dashboard"></i><span>Alta Catalogos</span> <b class="caret"></b> </a>
                         <ul class="dropdown-menu">
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="pricing.html">Pricing Plans</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="signup.html">Signup</a></li>
-                            <li><a href="error.html">404</a></li>
+                            <li><a asp-controller="Proyecto" asp-action="Create">Proyecto</a></li>
+                            <li><a asp-controller="Personas" asp-action="Create">Cliente/Proveedor</a></li>
+                            <li><a asp-controller="Cuentas" asp-action="Create">Cuenta</a></li>
+                            <li><a asp-controller="GrupoMovi" asp-action="Create">Grupo</a></li>
+                            <li><a asp-controller="Empresas" asp-action="Create">Empresa</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="navbar-brand" asp-area="" asp-controller="Movimientos" asp-action="Create"><i class="icon-list-alt"></i><span>Registro Movimientos</span> </a> </li>
+
+                    <li class="dropdown">
+                        <a asp-controller="" asp-action="" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-facetime-video"></i><span>Mostrar</span><b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Personas" asp-action="Details">Clientes</a></li>
+                            <li><a asp-controller="Personas" asp-action="Details">Proveedores</a></li>
+                            <li><a asp-controller="Cuentas" asp-action="Details">Cuentas y Grupos</a></li>
+                            <li><a asp-controller="Movimientos" asp-action="Details">Movimientos</a></li>
+                            <li><a asp-controller="Proyectos" asp-action="Details">Proyectos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a asp-controller="" asp-action="" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-long-arrow-down"></i><span>Usuario</span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <c:if test="${sessionScope.tipo == 1}">
+                                <li><a asp-controller="Usuarios" asp-action="Create">Crear nuevo usuario</a></li>
+                                <li><a asp-controller="Usuarios" asp-action="Details">Consulta usuarios</a></li>
+                            </c:if>
+                            <li><a asp-controller="Usuarios" asp-action="Edit">Configuración</a></li>
+                            <li><a asp-controller="Login" asp-action="Index">Cerrar sesión</a></li>
                         </ul>
                     </li>
                 </ul>
