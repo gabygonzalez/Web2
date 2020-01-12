@@ -1,0 +1,144 @@
+﻿@model ProyectoWeb.Models.TbMovimientos
+
+<h4>TbMovimientos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Folio" class="control-label"></label>
+                <input asp-for="Folio" class="form-control" />
+                <span asp-validation-for="Folio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdMovimiento" class="control-label"></label>
+                <input asp-for="IdMovimiento" class="form-control" />
+                <span asp-validation-for="IdMovimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProyecto" class="control-label"></label>
+                <select asp-for="IdProyecto" class ="form-control" asp-items="ViewBag.IdProyecto"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IngresoEgreso" class="control-label"></label>
+                <select asp-for="IngresoEgreso" class ="form-control" asp-items="ViewBag.IngresoEgreso"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rfc" class="control-label"></label>
+                <input asp-for="Rfc" class="form-control" />
+                <span asp-validation-for="Rfc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdEmpresas" class="control-label"></label>
+                <select asp-for="IdEmpresas" class ="form-control" asp-items="ViewBag.IdEmpresas"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPersonas" class="control-label"></label>
+                <select asp-for="IdPersonas" class ="form-control" asp-items="ViewBag.IdPersonas"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCuenta" class="control-label"></label>
+                <select asp-for="IdCuenta" class ="form-control" asp-items="ViewBag.IdCuenta"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdMetodoPago" class="control-label"></label>
+                <select asp-for="IdMetodoPago" class ="form-control" asp-items="ViewBag.IdMetodoPago"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdFormPago" class="control-label"></label>
+                <select asp-for="IdFormPago" class ="form-control" asp-items="ViewBag.IdFormPago"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdMonedas" class="control-label"></label>
+                <select asp-for="IdMonedas" class ="form-control" asp-items="ViewBag.IdMonedas"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTipoComprobante" class="control-label"></label>
+                <select asp-for="IdTipoComprobante" class ="form-control" asp-items="ViewBag.IdTipoComprobante"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concepto" class="control-label"></label>
+                <input asp-for="Concepto" class="form-control" />
+                <span asp-validation-for="Concepto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioUnitario" class="control-label"></label>
+                <input asp-for="PrecioUnitario" class="form-control" />
+                <span asp-validation-for="PrecioUnitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descuento" class="control-label"></label>
+                <input asp-for="Descuento" class="form-control" />
+                <span asp-validation-for="Descuento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subtotal" class="control-label"></label>
+                <input asp-for="Subtotal" class="form-control" />
+                <span asp-validation-for="Subtotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Iva" class="control-label"></label>
+                <input asp-for="Iva" class="form-control" />
+                <span asp-validation-for="Iva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RetIva" class="control-label"></label>
+                <input asp-for="RetIva" class="form-control" />
+                <span asp-validation-for="RetIva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RetIsr" class="control-label"></label>
+                <input asp-for="RetIsr" class="form-control" />
+                <span asp-validation-for="RetIsr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ieps" class="control-label"></label>
+                <input asp-for="Ieps" class="form-control" />
+                <span asp-validation-for="Ieps" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total" class="control-label"></label>
+                <input asp-for="Total" class="form-control" />
+                <span asp-validation-for="Total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uuid" class="control-label"></label>
+                <input asp-for="Uuid" class="form-control" />
+                <span asp-validation-for="Uuid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImpuestosLocales" class="control-label"></label>
+                <input asp-for="ImpuestosLocales" class="form-control" />
+                <span asp-validation-for="ImpuestosLocales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RutaArchivo" class="control-label"></label>
+                <input asp-for="RutaArchivo" class="form-control" />
+                <span asp-validation-for="RutaArchivo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class ="form-control" asp-items="ViewBag.Status"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Usuario" class="control-label"></label>
+                <input asp-for="Usuario" class="form-control" />
+                <span asp-validation-for="Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

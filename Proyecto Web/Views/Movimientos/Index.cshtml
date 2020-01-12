@@ -1,0 +1,179 @@
+﻿@model IEnumerable<ProyectoWeb.Models.TbMovimientos>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMovimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rfc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concepto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioUnitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descuento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subtotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RetIva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RetIsr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ieps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uuid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImpuestosLocales)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RutaArchivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCuentaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEmpresasNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdFormPagoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMetodoPagoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMonedasNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPersonasNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProyectoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTipoComprobanteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IngresoEgresoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMovimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rfc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Concepto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descuento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subtotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RetIva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RetIsr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ieps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uuid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImpuestosLocales)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RutaArchivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCuentaNavigation.IdCuenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEmpresasNavigation.IdEmpresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdFormPagoNavigation.IdFormaPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMetodoPagoNavigation.IdMetodo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMonedasNavigation.IdMoneda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPersonasNavigation.IdPersona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProyectoNavigation.IdProyectos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoComprobanteNavigation.IdComprobante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IngresoEgresoNavigation.IdIe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusNavigation.IdStatus)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Folio">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Folio">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Folio">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
